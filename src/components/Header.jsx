@@ -16,7 +16,7 @@ const Cabecalho = () => {
             <div id="pesquisa">
                 <form>
                     <input type="text" placeholder="Pesquisar produto..."/>
-                    <input type="submit" value="Go"></input>
+                    <button><img src="Search.svg" alt="search"></img></button>
                 </form>
             </div>
             <a>Cadastre-se</a>

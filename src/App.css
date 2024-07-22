@@ -1,7 +1,6 @@
 * {
-    margin: 1%;
+    margin: 0;
     padding: 0;
-
     font-family: 'Inter';
     font-style: normal;
 }
@@ -13,10 +12,12 @@
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
+    padding: 10%;
 }
 #headerCabecalho {
     display: flex;
     gap: 1.25vw;
+    margin: 6% 6% 3% 6%;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +29,7 @@
     width: 50%;
     /*afastar os elementos de tag a*/
     display: flex;
+    margin: 3% 6% 3% 6%;
     justify-content: space-between;
     a:hover{
         color: #C92071;
@@ -35,8 +37,32 @@
         text-decoration: underline;
     }
 }
+#pesquisa form {
+    display: flex; /* Exibe os elementos em linha */
+    align-items: center; /* Alinha verticalmente */
+    background: #F5F5F5;
+    color: #666666; /* dark-gray-3 */
+    border: none;
+    border-radius: 7%;
+    flex: 1; /* Ocupa todo o espaço disponível */
+    padding: 1%;
+}
+#pesquisa input[type="text"]{
+    background: #F5F5F5;
+    color: #666666; /* dark-gray-3 */
+    border: none;
+    flex: 1; /* Ocupa todo o espaço disponível */
+}
+#pesquisa button {
+    background:transparent;
+    color: #666666; /* dark-gray-3 */
+    border: none;
+    border-radius: 0%;
+}
+#pesquisa button:hover{
+    transform: none;
+}
 /**/
-
 
 
 #bodyDestaque {
@@ -44,25 +70,54 @@
 
     width: 100%;
     display: flex;
+    margin: auto;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 #descricao {
     background-color:#F5F5F5;
-
+    
     width: 40%;
     display: flex;
+    margin: 7%;
+    box-sizing: border-box;
     flex-flow: row wrap;
-    p {
-        color: yellow;
+    justify-content: flex-start;
+    max-width: 600px;
+    flex: 1;
+    padding: auto;
+    
+    h3 {
+        color: #F6AA1C;
+        margin: 2%;
     }
     h1{
         font-weight: 900;
+        color: #1F1F1F;
+        font-size: 250%;
+        line-height: 120%;
+        margin: 2%;
+    }
+    h1:hover{
+        font-weight: bold;
+        text-decoration: underline;
+        transform: scale(1.1);
+    }
+    p {
+        width: 80%;
+        color: #474747;
+        line-height: 140%;
+        margin: 2%;
     }
 }
 #imgDestaque {
     width: 40%;
     display: flex;
+    margin: 7%;
+    box-sizing: border-box;
+    max-width: 600px;
+    flex: 1;
     /*garante que a iamgem nao saia da div*/
     overflow: hidden;
     /*ajustar tamanho da iamgem ao tamanho da div*/
@@ -74,28 +129,68 @@
 }
 
 
+
 #bodyColecao {
-    display: flex;
-    flex-flow: column wrap;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /*permite que os itens dentro do contêiner sejam dispostos em várias linhas conforme necessário.*/
+    h2 {
+        width: 100%;
+        margin: 1% 7% 1% 7%;
+        color:#474747;
+    }
 }
 #card{
-    background-color: #C92071;
     display: flex;
-    width: 20%;
-    flex-flow: column wrap;
+    margin: 2%;
     justify-content: center;
-    align-items: center;
-}
+    box-sizing: border-box;
+    img {
+        overflow: hidden; /*garante que a iamgem nao saia da div*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4%;
+        transition: transform 0.3s ease;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+}/**/
 #icon{
-    background-color: aqua;
-    display: flex;
-    width: 20%;
-    flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    img {
+        overflow: hidden; /*garante que a iamgem nao saia da div*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
 }
 
+
+#bodyProdutos {
+    background-color: #F6AA1C;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /*permite que os itens dentro do contêiner sejam dispostos em várias linhas conforme necessário.*/
+    h2 {
+        width: 100%;
+        margin: 1% 7% 1% 7%;
+        color:#474747;
+    }
+}
+#produto {
+    background-color: #C92071;
+    
+}
 
 
 #footer {
@@ -103,10 +198,13 @@
     color: #FFFFFF;/* white */
     display: flex;
     flex-flow: column wrap;
+    padding: 5%;
+    gap: 20%;
 }
 #footerPrincipal {
     display: flex;
     justify-content: space-around;
+    gap: 10%;
     p{
         width: 65%;
     }
@@ -118,6 +216,9 @@
     display: flex;
     flex-flow: column wrap;
 }
+
+
+
 button {
     border-radius: 8em;
     border: none;
@@ -127,7 +228,72 @@ button {
     text-align: center;
     cursor: pointer;
     transition: 0.3s ease;
+    margin: 2%;
 }
 button:hover{
-    transform: scale(2, 2);
+    transform: scale(1.5);
+}
+
+@media(max-width: 700px){
+    #header {
+        a {
+            display: none;
+        }
+        button {
+            display: none;
+        }
+    }
+    #headerNavegacao {
+        display: none;
+    }
+    #pesquisa input {
+        display: none;
+    }
+    #bodyDestaque {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column-reverse nowrap;
+        padding:5%;
+    }
+    #descricao {
+        flex: 100%;
+        width:70%;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        h3 {
+            color: #C92071
+        }
+        p {
+            width: 70%;
+        }
+    }
+    #imgDestaque {
+        flex: 100%; /*qndo diminui ocupa 100% da largura da tela*/
+        width: 100%;
+    }
+    #footer {
+        gap: 10%;
+        width: 100%;
+    }
+    #footerPrincipal {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+        display: flex;
+        margin: auto;
+        gap: 10%;
+    }
+    #card {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+    }
+    #icon {
+        display: flex;
+        flex-flow: row nowrap;
+    }
 }
