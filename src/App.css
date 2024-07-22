@@ -1,0 +1,133 @@
+* {
+    margin: 1%;
+    padding: 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+
+#header {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#headerCabecalho {
+    display: flex;
+    gap: 1.25vw;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: underline;
+    }
+}
+#headerNavegacao{
+    width: 50%;
+    /*afastar os elementos de tag a*/
+    display: flex;
+    justify-content: space-between;
+    a:hover{
+        color: #C92071;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+/**/
+
+
+
+#bodyDestaque {
+    background-color: #F5F5F5;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#descricao {
+    background-color:#F5F5F5;
+
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    p {
+        color: yellow;
+    }
+    h1{
+        font-weight: 900;
+    }
+}
+#imgDestaque {
+    width: 40%;
+    display: flex;
+    /*garante que a iamgem nao saia da div*/
+    overflow: hidden;
+    /*ajustar tamanho da iamgem ao tamanho da div*/
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+#bodyColecao {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+#card{
+    background-color: #C92071;
+    display: flex;
+    width: 20%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#icon{
+    background-color: aqua;
+    display: flex;
+    width: 20%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#footer {
+    background-color: #1F1F1F;
+    color: #FFFFFF;/* white */
+    display: flex;
+    flex-flow: column wrap;
+}
+#footerPrincipal {
+    display: flex;
+    justify-content: space-around;
+    p{
+        width: 65%;
+    }
+}
+#footerSecundario {
+    text-align: center;
+}
+#list {
+    display: flex;
+    flex-flow: column wrap;
+}
+button {
+    border-radius: 8em;
+    border: none;
+    padding: 0.5em 3em;
+    background-color: #C92071;
+    color:#FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    transform: scale(2, 2);
+}
