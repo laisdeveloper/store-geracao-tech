@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { NavLink } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 
 export const Header = () => {
     return ( 
@@ -27,8 +28,8 @@ const Navegacao = () => {
         <div id="headerNavegacao">
             <ItensNav name="Home" caminho="/"/>
             <ItensNav name="Produtos" caminho="/products" />
-            <ItensNav name="Categorias"/>
-            <ItensNav name="Meus pedidos"/>
+            <ItensNav name="Categorias" caminho="/categories"/>
+            <ItensNav name="Meus pedidos" caminho="/myOrders"/>
         </div>
     );
 }
@@ -48,7 +49,7 @@ const Pesquisa = () => {
 const ButtonsHeader = () => {
     return (
         <>
-        <a>Cadastre-se</a>
+        <ItensNav name="Cadastre-se" caminho="/cadastro"/>
         <button>Entrar</button>
         <a><img src="./homepage/mini-cart.svg" alt="carrinho de compras"></img></a>
         </>

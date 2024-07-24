@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Router>
-      <main><HomePage /></main>
+    <main><HomePage /></main>
     </Router>
     </>
   )
