@@ -26,7 +26,7 @@ const Navegacao = () => {
     return (
         <div id="headerNavegacao">
             <ItensNav name="Home" caminho="/"/>
-            <ItensNav name="Produtos" caminho="/produtos" />
+            <ItensNav name="Produtos" caminho="/products" />
             <ItensNav name="Categorias"/>
             <ItensNav name="Meus pedidos"/>
         </div>
@@ -56,9 +56,7 @@ const ButtonsHeader = () => {
 }
 const ItensNav = ({name, caminho}) => {
     return (
-        <NavLink to={caminho} exact>
-            {name}
-        </NavLink>
+        <NavLink to={caminho} exact>{name}</NavLink>
     )
 }
 {/* <a src={caminho}>{name}</a> */}

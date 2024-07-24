@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-export const Body = () => {
+export const Principal = () => {
     return (
         <>
         <Destaque   titulo="Queima de stoque Nike 🔥"

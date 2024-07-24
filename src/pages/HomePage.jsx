@@ -1,5 +1,14 @@
+import { Footer } from "../components/Footer"
+import { Header } from "../components/Header"
+import { Principal } from "../components/Principal"
+
 export const HomePage = () => {
+    
     return(
-        <h1>home page</h1>
+        <>
+        <header><Header /></header>
+        <Principal />
+        <footer><Footer /></footer>
+        </>
     )
 }
