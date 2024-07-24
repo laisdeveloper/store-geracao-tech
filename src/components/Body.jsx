@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+
+
 export const Body = () => {
     return (
         <>
@@ -16,7 +19,13 @@ colecionador"
         </>
     )
 }
-const Destaque = ({titulo, subtitulo, descricaoD, imagem}) => {
+const Destaque = ({titulo, subtitulo, descricaoD}) => {
+
+    const roll = [
+        {"src": "products/home-slide-1.jpeg"},
+        {"src": "products/home-slide-2.jpeg"}
+    ]
+
     return (
         <div id="bodyDestaque">
             <div id="descricao">
@@ -26,7 +35,7 @@ const Destaque = ({titulo, subtitulo, descricaoD, imagem}) => {
                 <button>Ver Ofertas</button>
             </div>
             <div id="imgDestaque">
-                <img src={imagem} alt="imagem destaque"></img>
+                <Gallery imagens={roll}/>
             </div>
         </div>
     );
@@ -74,3 +83,33 @@ const Card = ({id, imagem}) => {
         </div>
     );
 }
+
+const Gallery = ({imagens}) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentIndex((prevIndex) =>
+            prevIndex === imagens.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 3000); // Muda a imagem a cada 3 segundos
+    
+        return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+      }, [imagens.length]);
+    
+      const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === imagens.length - 1 ? 0 : prevIndex + 1
+        );
+      };
+    
+      const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === 0 ? imagens.length - 1 : prevIndex - 1
+        );
+      };
+    
+    return (
+        <img src={imagens[currentIndex].src} alt="imagem destaque"></img>
+    )
+}
+{/* <img src={imagem} alt="imagem destaque"></img> */}
