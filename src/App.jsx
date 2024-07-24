@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; 
 import { useState } from 'react'
 
 import { Header } from './components/Header.jsx'
@@ -9,9 +11,11 @@ import './App.css'
 function App() {
   return (
     <>
-    <header><Header /></header>
-    <main><Body /></main>
-    <footer><Footer /></footer>
+    <Router>
+      <header><Header /></header>
+      <main><Body /></main>
+      <footer><Footer /></footer>
+    </Router>
     </>
   )
 }

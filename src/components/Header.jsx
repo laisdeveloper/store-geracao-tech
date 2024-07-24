@@ -1,3 +1,6 @@
+import React from 'react'; 
+import { NavLink } from 'react-router-dom'; 
+
 export const Header = () => {
     return ( 
         <>
@@ -22,8 +25,8 @@ const Cabecalho = () => {
 const Navegacao = () => {
     return (
         <div id="headerNavegacao">
-            <ItensNav name="Home"/>
-            <ItensNav name="Produtos"/>
+            <ItensNav name="Home" caminho="/"/>
+            <ItensNav name="Produtos" caminho="/produtos" />
             <ItensNav name="Categorias"/>
             <ItensNav name="Meus pedidos"/>
         </div>
@@ -53,6 +56,9 @@ const ButtonsHeader = () => {
 }
 const ItensNav = ({name, caminho}) => {
     return (
-        <a src={caminho}>{name}</a>
+        <NavLink to={caminho} exact>
+            {name}
+        </NavLink>
     )
 }
+{/* <a src={caminho}>{name}</a> */}
