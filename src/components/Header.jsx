@@ -1,5 +1,3 @@
-import { Logo } from './Logo'
-
 export const Header = () => {
     return ( 
         <>
@@ -14,7 +12,8 @@ export const Header = () => {
 const Cabecalho = () => {
     return (
         <div id="headerCabecalho">
-            <Logo referencia="header"/>
+            <img src="/homepage/logo-header.svg"     
+                    alt="logo header"></img>
             <Pesquisa />
             <ButtonsHeader />
         </div>

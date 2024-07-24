@@ -1,4 +1,3 @@
-import { Logo } from './Logo'
 
 export const Footer = () => {
     return (
@@ -14,7 +13,8 @@ const Principal = () => {
     return (
         <div id="footerPrincipal">
             <Bloco>
-                <Logo referencia="footer" />
+            <img src="/homepage/logo-footer.svg"
+                    alt="logo footer"></img>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
             </Bloco>
             <Bloco>
