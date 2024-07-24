@@ -22,8 +22,8 @@ colecionador"
 const Destaque = ({titulo, subtitulo, descricaoD}) => {
 
     const roll = [
-        {"src": "products/home-slide-1.jpeg"},
-        {"src": "products/home-slide-2.jpeg"}
+        {"src": "products/home-slide-7.jpeg"},
+        {"src": "products/home-slide-8.jpeg"}
     ]
 
     return (
@@ -50,6 +50,7 @@ const Colecao = () => {
                 imagem="./homepage/body/card/adidas.svg"/>
             <Card id="card" 
                 imagem="./homepage/body/card/bass.svg"/>
+                
             <h2>Coleções em destaque</h2>
             <Card id="icon"
                 imagem="/homepage/body/icon/shirt.svg"/>
