@@ -2,7 +2,7 @@ import { ProductCard } from "./ProductCard";
 
 export const ProductListing = ({ products }) => {
   return (
-    <div>
+    <div id="ProductListing">
       {products.map((product, index) => (
         <ProductCard
           key={index}

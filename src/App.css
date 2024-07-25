@@ -194,10 +194,37 @@
         color:#474747;
     }
 }
-#produto {
-    background-color: #C92071;
-    
+#ProductListing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    margin: 2%;
+    width: 100%;
+    justify-content: center;
 }
+#ProductCard {
+    width: 30%;
+    color: #1F1F1F;
+    img {
+        overflow: hidden; /*garante que a iamgem nao saia da div*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+#discount {
+        h3 {
+            color: #8F8F8F;
+        }
+        h4{
+            color: #1F1F1F;
+        }
+    }
 
 
 #footer {
