@@ -127,55 +127,55 @@ const products =  [
     {
       name: "K-Swiss v8 - Masculino",
       image: "/homepage/body/product/produc-image-1.jpeg",
-      price: 200,
+      price: '$200',
       priceDiscount: 149.9
     },
     {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
       {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
       {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
       {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
       {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
       {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
       },
     {
     name: "K-Swiss v8 - Masculino",
     image: "/homepage/body/product/produc-image-1.jpeg",
-    price: 200,
+    price: '$200',
     priceDiscount: 149.9
     },
     {
         name: "K-Swiss v8 - Masculino",
         image: "/homepage/body/product/produc-image-1.jpeg",
-        price: 200,
+        price: '$200',
         priceDiscount: 149.9
         }
   ]

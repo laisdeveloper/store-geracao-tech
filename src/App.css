@@ -31,7 +31,11 @@
     display: flex;
     margin: 3% 6% 3% 6%;
     justify-content: space-between;
-    a:hover{
+    a {
+        color:  #474747; 
+        text-decoration: none; /* Remove underline padrão */
+    }
+    a.active{
         color: #C92071;
         font-weight: bold;
         text-decoration: underline;
@@ -183,7 +187,6 @@
 
 
 #bodyProdutos {
-    background-color: #F6AA1C;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -203,8 +206,10 @@
     justify-content: center;
 }
 #ProductCard {
-    width: 30%;
+    width: 40%;
     color: #1F1F1F;
+    margin: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     img {
         overflow: hidden; /*garante que a iamgem nao saia da div*/
         width: 100%;
@@ -215,16 +220,19 @@
     }
     img:hover{
         transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 }
 #discount {
-        h3 {
-            color: #8F8F8F;
-        }
-        h4{
-            color: #1F1F1F;
-        }
+    h3 {
+        color: #8F8F8F;
+        display: inline-block;
+        text-decoration: line-through;
     }
+    h4{
+        color: #1F1F1F;
+    }
+}
 
 
 #footer {

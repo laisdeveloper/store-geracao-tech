@@ -7,7 +7,7 @@ export const Header = () => {
         <>
         <div id="Header">
             <Cabecalho />
-            <Navegacao />
+            <Navegacao /> 
         </div>
         </>
     );
@@ -94,7 +94,7 @@ const ButtonsHeader = () => {
 }
 const ItensNav = ({name, caminho}) => {
     return (
-        <NavLink to={caminho} exact>{name}</NavLink>
+        <NavLink to={caminho} exact activeClassName="active">{name}</NavLink>
     )
 }
 {/* <a src={caminho}>{name}</a> */}
