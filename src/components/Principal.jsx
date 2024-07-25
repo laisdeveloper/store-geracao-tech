@@ -65,6 +65,20 @@ const Colecao = () => {
         </div>
     );
 }
+const products =  [
+    {
+      name: "K-Swiss v8 - Masculino",
+      image: "products/product-thumb-1.png",
+      price: 200,
+      priceDiscount: 149.9
+    },
+    {
+    name: "K-Swiss v8 - Masculino",
+    image: "products/product-thumb-1.png",
+    price: 200,
+    priceDiscount: 149.9
+    }
+  ]
 const Produtos = () => {
     return (
         <div id="bodyProdutos">

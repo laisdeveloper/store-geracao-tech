@@ -1,17 +1,30 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+export const Section = ({ title, titleAlign, link, children }) => {
+  const titleStyles = {
+    color: 'dark-gray-2',
+    fontSize: '24px',
+    textAlign: titleAlign,
+  };
 
-import {HomePage} from '../pages/HomePage'; 
-import {ProductListingPage} from '../pages/ProductListingPage';
-import {ProductViewPage }from '../pages/ProductViewPage';
+  const linkStyles = {
+    color: 'primary',
+    fontSize: '18px',
+    textDecoration: 'none',
+    marginLeft: 'auto',
+  };
 
-
-export const Section = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/products" component={ProductListingPage} />
-      <Route path="/productsView/:id" component={ProductViewPage} />
-    </Switch>
+    <div>
+      <div>
+        <h2 style={titleStyles}>{title}</h2>
+        {link && (
+          <a href={link.href} style={linkStyles}>
+            {link.text}
+          </a>
+        )}
+      </div>
+      <div>
+        {children}
+      </div>
+    </div>
   );
-}
+};
