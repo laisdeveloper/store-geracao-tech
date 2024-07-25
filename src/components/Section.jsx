@@ -8,8 +8,6 @@ export const Section = ({ title, titleAlign, link, children }) => {
   const linkStyles = {
     color: 'primary',
     fontSize: '18px',
-    textDecoration: 'none',
-    marginLeft: 'auto',
   };
 
   return (

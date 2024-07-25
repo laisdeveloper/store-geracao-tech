@@ -1,3 +1,5 @@
+import { ProductCard } from "./ProductCard";
+
 export const ProductListing = ({ products }) => {
   return (
     <div>

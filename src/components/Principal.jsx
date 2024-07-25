@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { ProductCard } from './ProductCard';
+import { ProductListing } from './ProductListing';
 
 
 export const Principal = () => {
@@ -24,10 +26,27 @@ const Destaque = ({titulo, subtitulo, descricaoD}) => {
     const roll = [
         {"src": "products/home-slide-7.jpeg"},
         {"src": "products/home-slide-8.jpeg"}
-    ]
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === roll.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? roll.length - 1 : prevIndex - 1
+        );
+    };
 
     return (
         <div id="bodyDestaque">
+            <div id="setaEsquerda" onClick={prevSlide}>
+                <img src="arrow-left.svg" alt="seta esquerda" />
+            </div>
             <div id="descricao">
                 <h3>{subtitulo}</h3>
                 <h1>{titulo}</h1>
@@ -35,11 +54,14 @@ const Destaque = ({titulo, subtitulo, descricaoD}) => {
                 <button>Ver Ofertas</button>
             </div>
             <div id="imgDestaque">
-                <Gallery imagens={roll}/>
+                <Gallery imagens={roll} currentIndex={currentIndex} />
+            </div>
+            <div id="setaDireita" onClick={nextSlide}>
+                <img src="arrow-right.svg" alt="seta direita" />
             </div>
         </div>
     );
-}
+};
 const Colecao = () => {
     return (
         <div id="bodyColecao">
@@ -65,31 +87,16 @@ const Colecao = () => {
         </div>
     );
 }
-const products =  [
-    {
-      name: "K-Swiss v8 - Masculino",
-      image: "products/product-thumb-1.png",
-      price: 200,
-      priceDiscount: 149.9
-    },
-    {
-    name: "K-Swiss v8 - Masculino",
-    image: "products/product-thumb-1.png",
-    price: 200,
-    priceDiscount: 149.9
-    }
-  ]
+
 const Produtos = () => {
     return (
-        <div id="bodyProdutos">
-            <h2>Produtos em alta</h2>
-            <Card id="produto"
-                    imagem="/homepage/body/product/sale.png"/>
-            <Card id="produto"
-                    imagem="/homepage/body/product/normal.png"/>
-        </div>
+      <div id="bodyProdutos">
+        <h2>Produtos em alta</h2>
+        <ProductListing products={products} />
+      </div>
     );
-}
+  }
+{/* <ProductListing products={products} /> */}
 
 const Card = ({id, imagem}) => {
     return (
@@ -99,8 +106,7 @@ const Card = ({id, imagem}) => {
     );
 }
 
-const Gallery = ({imagens}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const Gallery = ({imagens, currentIndex}) => {
     useEffect(() => {
         const interval = setInterval(() => {
           setCurrentIndex((prevIndex) =>
@@ -111,20 +117,59 @@ const Gallery = ({imagens}) => {
         return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
       }, [imagens.length]);
     
-      const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === imagens.length - 1 ? 0 : prevIndex + 1
-        );
-      };
-    
-      const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === 0 ? imagens.length - 1 : prevIndex - 1
-        );
-      };
-    
     return (
-        <img src={imagens[currentIndex].src} alt="imagem destaque"></img>
-    )
-}
+        <img src={imagens[currentIndex].src} alt="imagem destaque" />
+    );
+};
 {/* <img src={imagem} alt="imagem destaque"></img> */}
+
+const products =  [
+    {
+      name: "K-Swiss v8 - Masculino",
+      image: "/homepage/body/product/produc-image-1.jpeg",
+      price: 200,
+      priceDiscount: 149.9
+    },
+    {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+      {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+      {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+      {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+      {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+      {
+        name: "K-Swiss v8 - Masculino",
+        image: "/homepage/body/product/produc-image-1.jpeg",
+        price: 200,
+        priceDiscount: 149.9
+      },
+    {
+    name: "K-Swiss v8 - Masculino",
+    image: "/homepage/body/product/produc-image-1.jpeg",
+    price: 200,
+    priceDiscount: 149.9
+    }
+  ]

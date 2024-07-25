@@ -11,4 +11,4 @@ export const ProductCard = ({ image, name, price, priceDiscount }) => {
         </div>
       </div>
     );
-  };
+  }; 
