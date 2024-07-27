@@ -14,8 +14,13 @@ export const Header = () => {
 }
 
 const Cabecalho = () => {
+    const pesquisar = () => {
+        <Pesquisa />
+    }
+    
     return (
         <div id="headerCabecalho">
+            <button className='atalho-mobile-search' onClick={pesquisar}><img src="/homepage/Menu.png"></img></button>
             <img src="/homepage/logo-header.svg"     
                     alt="logo header"></img>
             <Pesquisa />
@@ -34,19 +39,6 @@ const Navegacao = () => {
     );
 }
 
-
-/* const Pesquisa = () => {
-    return (
-        <div id="pesquisa">
-            <form>
-                <input type="text" 
-                        placeholder="Pesquisar produto..."/>
-                <button><img src="Search.svg" alt="search"></img></button>
-            </form>
-        </div>
-    )
-} */
-
 const Pesquisa = () => {
     /*  cria um estado query para armazenar o valor digitado  */
     const [busca, setBusca] = React.useState('');
@@ -59,16 +51,14 @@ const Pesquisa = () => {
             navigate(`/products?filter=${busca.trim()}`);
         }
     };
-
     /*  tecla pressionada for Enter */
     const lidarComTecla = (event) => {
         if (event.key === 'Enter') {
             realizarBusca();
         }
     };
-
     return (
-        <div id="pesquisa">
+        <div id="pesquisaHeader">
             <input 
                 type="text" 
                 placeholder="Pesquisar produto..." 
@@ -86,15 +76,15 @@ const Pesquisa = () => {
 const ButtonsHeader = () => {
     return (
         <>
-        <ItensNav name="Cadastre-se" caminho="/cadastro"/>
-        <button>Entrar</button>
+        <ItensNav class="cadastroHeader" name="Cadastre-se" caminho="/cadastro"/>
+        <button className='buttonHeader'>Entrar</button>
         <a><img src="./homepage/mini-cart.svg" alt="carrinho de compras"></img></a>
         </>
     );
 }
 const ItensNav = ({name, caminho}) => {
     return (
-        <NavLink to={caminho} exact activeClassName="active">{name}</NavLink>
+        <NavLink to={caminho} exact className="nav-link" activeClassName="active">{name}</NavLink>
     )
 }
 {/* <a src={caminho}>{name}</a> */}

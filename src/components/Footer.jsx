@@ -105,7 +105,7 @@ const Secundario = ({ date }) => {
 // Componente Bloco para estruturação
 const Bloco = ({ children }) => {
     return (
-        <div className="bloco">
+        <div className="blocoFooter">
             {children}
         </div>
     );
@@ -114,7 +114,7 @@ const Bloco = ({ children }) => {
 // Componente para renderizar lista de informações ou categorias
 const InformacoesPagina = ({ items }) => {
     return (
-        <ul>
+        <ul className='info-lista'>
             {items.map((item, index) => (
                 <li key={index}>
                     <NavLink to={item.link}>{item.text}</NavLink>
