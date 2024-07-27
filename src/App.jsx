@@ -3,12 +3,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { HomePage } from './pages/HomePage.jsx';
 
 import './App.css'
+import { ProductListingPage } from './pages/ProductListingPage.jsx';
 
 function App() {
   return (
     <>
     <Router>
-    <main><HomePage /></main>
+    <main><ProductListingPage /></main>
     </Router>
     </>
   )
