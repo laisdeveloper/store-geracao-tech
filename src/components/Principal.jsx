@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { ProductCard } from './ProductCard';
 import { ProductListing } from './ProductListing';
 
 
@@ -11,7 +10,7 @@ export const Principal = () => {
                     descricaoD="Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
                     imagem="/products/produc-image-1.jpeg"/>
         <Colecao />
-        <Produtos />
+        <Produtos title="Produtos em alta"/>
         <Destaque   titulo="Air Jordan edição de 
 colecionador"
                     subtitulo="Oferta especial"
@@ -88,10 +87,10 @@ const Colecao = () => {
     );
 }
 
-const Produtos = () => {
+export const Produtos = ({title}) => {
     return (
       <div id="bodyProdutos">
-        <h2>Produtos em alta</h2>
+        <h2>{title}</h2>
         <ProductListing products={products} />
       </div>
     );
@@ -128,7 +127,7 @@ const products =  [
       name: "K-Swiss v8 - Masculino",
       image: "/homepage/body/product/produc-image-1.jpeg",
       price: '$200',
-      priceDiscount:'$149.9'
+      priceDiscount:'$149.9' 
     },
     {
         name: "K-Swiss v8 - Masculino",

@@ -222,7 +222,6 @@
     justify-content: center;
 }
 #ProductCard {
-   
     width: 28%;
     overflow: hidden;
     flex-flow: row wrap;
@@ -269,6 +268,15 @@
     text-decoration: line-through;
 }
 
+.SearchProducts{
+    display: flex;
+    flex-wrap: row nowrap;
+    margin: 2%;
+}
+.filter {
+    padding-top: 7%;
+    padding-right: 2%;
+}
 
 #footer {
     background-color: #1F1F1F;
@@ -409,5 +417,8 @@ button:hover{
         display: flex;
         flex-wrap: row wrap;
 
+    }
+    .filter {
+        display: none;
     }
 }
