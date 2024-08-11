@@ -5,9 +5,7 @@ import { SearchProducts } from "../components/SearchProducts"
 export const ProductListingPage =() => {
     return (
         <>
-        <header><Header /></header>
         <SearchProducts />
-        <footer><Footer /></footer>
         </>
     )
 } 

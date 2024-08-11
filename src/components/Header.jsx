@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { NavLink } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import { useNavigate } from 'react-router-dom'; 
 
 export const Header = () => {
@@ -31,13 +31,14 @@ const Cabecalho = () => {
 const Navegacao = () => {
     return (
         <div id="headerNavegacao">
-            <ItensNav name="Home" caminho="/"/>
-            <ItensNav name="Produtos" caminho="/products" />
-            <ItensNav name="Categorias" caminho="/categories"/>
-            <ItensNav name="Meus pedidos" caminho="/myOrders"/>
+            <Link to={"/"} className="link" activeclassname="active">Home</Link>
+            <Link to={"/products"} className="link" activeclassname="active">Produtos</Link>
+            <Link to={"/categories"} className="link" activeclassname="active">Categorias</Link>
+            <Link to={"/myOrders"} className="link" activeclassname="active">Meus Pedidos</Link>
         </div>
     );
 }
+
 
 const Pesquisa = () => {
     /*  cria um estado query para armazenar o valor digitado  */
@@ -76,15 +77,15 @@ const Pesquisa = () => {
 const ButtonsHeader = () => {
     return (
         <>
-        <ItensNav class="cadastroHeader" name="Cadastre-se" caminho="/cadastro"/>
+        {/* <ItensNav class="cadastroHeader" name="Cadastre-se" caminho="/cadastro"/> */}
+        <Link to={"/cadastro"} className="link" activeclassname="active">Cadastre-se</Link>
         <button className='buttonHeader'>Entrar</button>
         <a><img src="./homepage/mini-cart.svg" alt="carrinho de compras"></img></a>
         </>
     );
-}
-const ItensNav = ({name, caminho}) => {
+}/* 
+export const ItensNav = ({name, caminho}) => {
     return (
-        <NavLink to={caminho} exact className="nav-link" activeClassName="active">{name}</NavLink>
+        <Link to={caminho} className="link" activeClassName="active">{name}</Link>
     )
-}
-{/* <a src={caminho}>{name}</a> */}
+} */

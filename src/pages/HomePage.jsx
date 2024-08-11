@@ -6,9 +6,7 @@ export const HomePage = () => {
     
     return(
         <>
-        <header><Header /></header>
         <Principal />
-        <footer><Footer /></footer>
         </>
     )
 }

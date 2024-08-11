@@ -1,17 +1,25 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import {HomePage} from '../pages/HomePage'; 
 import {ProductListingPage} from '../pages/ProductListingPage';
 import {ProductViewPage }from '../pages/ProductViewPage';
+import { Layout } from './Layout';
+import { NotFound } from './NotFound';
 
 
-export const Routes = () => {
+export const AppRoutes = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/products" component={ProductListingPage} />
-      <Route path="/productsView/:id" component={ProductViewPage} />
-    </Switch>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} /> 
+          <Route path="products" element={<ProductListingPage />} />
+          <Route path="categories" element={<ProductViewPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
+    
