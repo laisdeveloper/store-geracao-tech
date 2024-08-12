@@ -247,6 +247,9 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 }
+#h4discount{
+    color: #8F8F8F;
+}
 #descricaoCard{
     flex-wrap: wrap;
     font-size: 24px;
@@ -275,15 +278,6 @@
     margin: 2%;
     background-color: #F9F8FE;
 }
-.filter {
-    padding-top: 2%;
-    padding-left: 2%;
-    width: 15%;
-    padding-right: 2%;
-    input {
-        background-color: #C92071;
-    }
-}
 .BodyProducts{
     display: flex;
 }
@@ -293,6 +287,13 @@
     justify-content:space-between;
     align-items: center;
     padding: 2%;
+    color: #474747;
+}
+#iconFilterMobile{
+    display: none;
+}
+#h3quantityProducts {
+    font-weight: bold;
 }
 #results {
     h3{
@@ -300,15 +301,48 @@
     }
 }
 #ordenar {
+    display: flex;
+    justify-items: center;
+    margin-right: 2%;
     select {
         border-color: #474747;
-        background-color: transparent;
         border-radius: 2%;
+        padding: 7%;
+        border-radius: 7%;
+        margin-right: 7%;
     }
 }
 
-.filter{
-    background-color:#FFFFFF;
+.filter {
+    padding-top: 2%;
+    padding-left: 2%;
+    width: 15%;
+    padding-right: 2%;
+}
+.checkbox {
+    display: flex;
+    margin: 3%;
+    align-items: center;
+}
+.checkbox input {
+    width: 20px;  
+    height: 20px; 
+    margin-right: 5%;
+    appearance: none;
+    border:solid #666666;
+    border-radius: 15%;
+    cursor: pointer;
+}
+.checkbox input[type="radio"] {
+    border-radius: 50%; 
+}
+.checkbox input:checked{
+    background-color: #C92071; /* Cor #C92071 quando marcado */
+    border-color: #C92071;
+}
+.checkbox input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: #FFFFFF;
 }
 
 #footer {
@@ -455,5 +489,14 @@ button:hover{
     }
     .filter {
         display: none;
+    }
+    .NavProducts{
+        flex-flow: column-reverse wrap;
+    }
+    #ordenar {
+        margin: 4%;
+    }
+    #iconFilterMobile{
+        display: inline-block;
     }
 }
