@@ -1,8 +1,11 @@
-# React + Vite
+# Projeto Digital Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto Front-End proposto pelo curso FullStack Geração Tech, uma parceria entre o IEL Ceara, FIEC, ADECE e o Governo do Estado do Ceará.
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O curso é proposto como uma formação mais rapida. porem com varias aulas super completas, e projetos praticos, alem de comunidades e monitorias excelentes.
+
+<br>
+
+Fico muito feliz pela oportunidade de poder participar da primeira edição deste curso, e com certeza ira ajudar varios jovens a começarem na sua carreira como Desenvolvedor!!
