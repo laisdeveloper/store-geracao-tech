@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react()],
   base: "/store-geracao-tech",
   build: { outDir: 'dist'},
-  publicDir: 'public'
+  publicDir: 'src'
 })
